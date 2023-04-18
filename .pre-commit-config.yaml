@@ -1,0 +1,36 @@
+repos:
+-   repo: https://github.com/psf/black
+    rev: 23.1.0
+    hooks:
+    -   id: black
+
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.0.0
+    hooks:
+    -   id: flake8
+        additional_dependencies:
+        -   flake8-bugbear
+        -   flake8-docstrings
+        -   flake8-import-order
+        -   flake8-quotes
+        -   pep8-naming
+        -   pydocstyle
+        -   flake8-comprehensions
+        -   flake8-tidy-imports
+        -   darglint
+        -   flake8-assertive
+        -   flake8-bandit
+        -   flake8-annotations-complexity
+        -   flake8-isort
+
+-   repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
+    hooks:
+    -   id: isort
+        args: ["--atomic"]
+
+-   repo: https://github.com/myint/autoflake
+    rev: v2.0.2
+    hooks:
+    -   id: autoflake
+        args: ["--remove-unused-variables", "--remove-all-unused-imports", "--expand-star-imports", "--ignore-init-module-imports"]

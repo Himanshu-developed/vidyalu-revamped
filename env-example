@@ -1,0 +1,4 @@
+ENV='local'
+DATABASE_URL="postgres://SA:zZuWp1Kz8F3o1vvW5NpbjBkAEIjv79tLUpxV3@localhost:5432/vidyalu_db"
+REDIS_URL='redis://127.0.0.1:6379'
+SECRET_KEY='django-insecure-433-^+bc6(nw+u(rip!zj@5%ec2by1gooete&+px0lpts8!8u_'
