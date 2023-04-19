@@ -25,7 +25,7 @@ def send_onboard_eamil(request, email):
         # absurl = str(url) + "uidb64=" + uidb64 + "&" + "token=" + token
         subject = "Vidyalu account verification."
         body =  "Hi,\n" + user.username + "\n" +"Please click below link to verify your email address\n" + absurl
-        send_mail(subject, body, settings.EMAIL_HOST_USER, [email])
+        send_mail(subject, body, settings.EMAIL_HOST_USER, [email], fail_silently=False)
         return api_response(200, "We have sent you a link to activate your account", {"uidb64": uidb64, "token": token})
     return api_response(404, "User email not found", {"email": email})
 
