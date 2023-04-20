@@ -100,15 +100,15 @@ AUTH_USER_MODEL = 'core.User'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {'default': env.db_url('DATABASE_URL')}
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': env('REDIS_URL'),
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-        },
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': env('REDIS_URL'),
+#         'OPTIONS': {
+#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#         },
+#     }
+# }
 
 
 # Password validation
