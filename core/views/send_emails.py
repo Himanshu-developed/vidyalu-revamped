@@ -26,7 +26,7 @@ def send_onboard_eamil(request, email):
         subject = "Vidyalu account verification."
         body =  "Hi,\n" + user.username + "\n" +"Please click below link to verify your email address\n" + absurl
         try:
-            send_mail(subject, body, 'himanshu.raj1025@gmail.com', 'himanshu.raj1025@gmail.com')
+            send_mail(subject, body, 'himanshu.raj1025@gmail.com', ['himanshu.raj1025@gmail.com'])
         except Exception as err:
             print(err)
         return api_response(200, "We have sent you a link to activate your account", {"uidb64": uidb64, "token": token})
