@@ -197,13 +197,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'himanshu.raj1025@gmail.com'
-EMAIL_HOST_PASSWORD = 'mjkeaeipnaxrlzxa'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1440),
@@ -265,3 +258,8 @@ LOGGING = {
         },
     },
 }
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_ACCESS_KEY_ID = 'AKIAQP2LLV3QABH45LHY'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_SES_REGION_NAME = 'ap-south-1'
+AWS_SES_REGION_ENDPOINT = 'email.ap-south-1.amazonaws.com'

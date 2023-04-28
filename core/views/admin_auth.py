@@ -70,7 +70,7 @@ class AdminRequestPasswordResetEmail(generics.GenericAPIView):
             absurl = str(url) + "uidb64=" + uidb64 + "&" + "token=" + token
             subject = "Reset your passsword"
             body = "Hi,\n" + user.username + "\n" + "Use link below to reset your password\n" + absurl
-            send_mail(subject, body, settings.EMAIL_HOST_USER, [to_email])
+            send_mail(subject, body, 'himanshu.raj1025@gmail.com', 'himanshu.raj1025@gmail.com')
             return api_response(200, "We have sent you a link to reset your password", {}, status=True)
         else:
             return api_response(400, "Your mail is not registered with us", {}, status=False)
