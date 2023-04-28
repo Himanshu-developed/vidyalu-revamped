@@ -28,7 +28,7 @@ def send_onboard_eamil(request, email):
         try:
             send_mail(subject, body, 'himanshu.raj1025@gmail.com', 'himanshu.raj1025@gmail.com')
         except Exception as err:
-            l(err)
+            print(err)
         return api_response(200, "We have sent you a link to activate your account", {"uidb64": uidb64, "token": token})
     return api_response(404, "User email not found", {"email": email})
 
