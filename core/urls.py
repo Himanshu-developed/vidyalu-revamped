@@ -12,7 +12,7 @@ from core.views.admin_auth import AdminUpdatePassword
 from core.views.vidyalu_home_view import PopularCourselistView,PopularSessionlistView,PopularTeacherlistView,PopularCounsellorlistView
 
 from core.views.otp_processing_view import GenerateOTPView, VerifyOTPView
-
+from core.views.login_using_otp import GenerateOtp
 
 
 urlpatterns = [
@@ -49,6 +49,7 @@ urlpatterns = [
 
     path('api/generate_otp',GenerateOTPView.as_view(), name = 'generate_otp'),
     path('api/verify_otp',VerifyOTPView.as_view(), name = 'verify_otp'),
+    path('api/generate_login_otp', GenerateOtp.as_view(), name='login_generate_otp')
 
 
     # path("admin/password/change", UpdatePassword.as_view(), name="password_change"),

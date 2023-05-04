@@ -221,7 +221,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=7),
 }
 
-SITEURL = 'https://vidyalu.myvtd.site/'
+SITEURL = 'https://www.api-test.zlearner.io/'
 SITEURLS = 'http://localhost:8000/'
 
 

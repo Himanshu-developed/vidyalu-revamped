@@ -34,6 +34,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     photo_url = models.CharField(max_length=199, default="")
     area_code = models.CharField(max_length=20, null=True, blank=True)
     phone = models.CharField(max_length=20, null=True, blank=True)
+    dial_code=models.IntegerField()
     is_active = models.BooleanField(default=True)
     is_user = models.BooleanField(default=True)
     approved = models.BooleanField(null=True, default=False)
